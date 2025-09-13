@@ -28,7 +28,7 @@ body {
     overflow: hidden;
     display: flex;
     align-items: center;
-    background-image: url(/src/assets/images/hero_banner.png);
+    background-image: url(src/assets/images/footer_background.png);
     background-position: right;
     background-size: cover;
 }
