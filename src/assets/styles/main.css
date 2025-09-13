@@ -28,7 +28,7 @@ body {
     overflow: hidden;
     display: flex;
     align-items: center;
-    background-image: url(https://raw.githubusercontent.com/rohitprajapati-37-boomlive/Online-Scams/refs/heads/main/src/assets/images/footer_background.png);
+    background-image: url(./images/footer_background.png);
     background-position: right;
     background-size: cover;
 }
