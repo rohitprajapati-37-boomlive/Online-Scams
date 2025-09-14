@@ -29,7 +29,7 @@ body {
             rgba(15, 52, 96, 0.7) 75%, 
             rgba(83, 52, 131, 0.8) 100%
         ),
-        url('/images/hero_banner.png');
+        url('images/hero_banner.png');
     background-position: right center;
     background-size: cover;
     background-repeat: no-repeat;
