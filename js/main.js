@@ -315,7 +315,7 @@ function addEnhancedStyles() {
         }
         
         .faq-toggle.active {
-            transform: rotate(45deg) !important;
+            transform: rotate(180deg) !important;
         }
         
         .faq-question {

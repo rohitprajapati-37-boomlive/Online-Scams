@@ -325,7 +325,7 @@ body {
 /* Malware Text - WORKING ANIMATIONS */
 .malware-text {
     color: #ff3333;
-    /* font-family: 'Courier New', monospace; */
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     line-height: 1.8;
     /* FIXED: Add proper animation */
@@ -417,7 +417,7 @@ body {
 .card-number {
     color: white;
     font-size: 6px;
-    /* font-family: monospace; */
+   font-family: 'Montserrat', sans-serif;
 }
 
 .card-1 {
@@ -1021,18 +1021,13 @@ body {
 
 /* How It Works Section */
 .how-it-works-section {
-    background: linear-gradient(135deg, 
-        #ff6b6b 0%, 
-        #ff4757 15%, 
-        #ff3838 30%, 
-        #2c2c54 70%, 
-        #40407a 85%, 
-        #3742fa 100%);
-    padding: 120px 0;
+    background: linear-gradient(135deg, #e61628 0%, #2d0509 25%, #000000 75%, #4e6aa9 100%);
+    padding: 100px 0;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    display: flex;
+    display: flex
+;
     align-items: center;
 }
 
@@ -1292,38 +1287,38 @@ h2.main-title {
     height: 60px;
     position: relative;
     display: flex;
+        flex-direction: column;
     align-items: center;
-    justify-content: center;
     opacity: 0;
     animation: arrowFadeIn 1s ease-out 2.2s forwards;
     z-index: 2;
 }
 
 .arrow-line {
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, 
-        rgba(255, 255, 255, 0.4), 
-        rgba(52, 152, 219, 0.8), 
-        rgba(255, 255, 255, 0.4));
+    top: 50%;
+    right: -20px;
+    width: 66px;
+    height: 240px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(52, 152, 219, 0.8));
     border-radius: 2px;
     position: relative;
-    animation: arrowFlow 3s ease-in-out infinite;
-    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+    animation: arrowPulse 2s ease-in-out infinite;
+    border-left: 30px solid #e85350;
+    border-top: 120px solid transparent;
+    border-bottom: 120px solid transparent;
 }
 
 .arrow-head {
     position: absolute;
-    right: -12px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     width: 0;
     height: 0;
-    border-left: 16px solid #3498db;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    animation: arrowPulse 3s ease-in-out infinite;
-    filter: drop-shadow(0 2px 5px rgba(52, 152, 219, 0.4));
+    border-left: 30px solid #e85350;
+    border-top: 120px solid transparent;
+    border-bottom: 120px solid transparent;
+    animation: arrowBounce 2s ease-in-out infinite;
 }
 
 .bg-elements {
@@ -1375,7 +1370,7 @@ h2.main-title {
 .faq-section {
     background: #f5f7fa;
     padding: 80px 0;
-    /* font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; */
+   font-family: 'Montserrat', sans-serif;
 }
 
 .faq-section .container {
@@ -1429,7 +1424,7 @@ h2.main-title {
     align-items: center;
     color: #2d3748;
     transition: all 0.3s ease;
-    /* font-family: inherit; */
+   font-family: 'Montserrat', sans-serif;
 }
 
 .faq-question:hover {
@@ -1653,7 +1648,7 @@ h2.main-title {
     align-items: center;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(74, 85, 104, 0.3);
-    /* font-family: inherit; */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .read-more-btn:hover {
@@ -1785,7 +1780,7 @@ h2.main-title {
 
 .error-code {
     color: #ff4444;
-    /* font-family: 'Courier New', monospace; */
+   font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     margin-bottom: 6px;
     opacity: 0.9;
@@ -2133,24 +2128,25 @@ h2.main-title {
         align-items: center;
     }
     
-    .arrow-connector {
-        width: 6px;
-        height: 50px;
+     .arrow-connector {
+        width: 8px;
+        height: 60px;
         transform: none;
-        margin: 20px 0;
+        margin: 25px 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
     
     .arrow-line {
-        width: 6px;
-        height: 40px;
+        width: 8px;
+        height: 50px;
         background: linear-gradient(180deg, 
-            rgba(52, 152, 219, 0.3),
-            rgba(52, 152, 219, 0.9),
-            rgba(52, 152, 219, 0.3));
-        border-radius: 3px;
+            rgba(231, 83, 80, 0.3),
+            rgba(231, 83, 80, 0.9),
+            rgba(231, 83, 80, 0.3));
+        border-radius: 4px;
+        border: none; /* Remove horizontal borders */
         animation: verticalArrowFlow 3s ease-in-out infinite;
     }
     
@@ -2159,11 +2155,11 @@ h2.main-title {
         transform: none;
         right: auto;
         top: auto;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 16px solid #3498db;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 20px solid #e85350;
         border-bottom: none;
-        margin-top: -2px;
+        margin-top: -3px;
         animation: verticalArrowPulse 3s ease-in-out infinite;
     }
     
@@ -2327,15 +2323,28 @@ h2.main-title {
     }
     
     .step {
-        width: 300px;
-        min-height: 320px;
-        padding: 30px 20px;
+        width: calc(100vw - 40px);
+        max-width: 350px;
+        min-height: 300px;
+        padding: 25px 20px;
+        margin: 0 auto;
     }
     
-    .step-bg-number {
-        font-size: 8rem;
-        top: 10px;
-        right: 15px;
+ .step-bg-number {
+        font-size: 7rem;
+        top: 5px;
+        right: 10px;
+        opacity: 0.05;
+    }
+    
+    .step-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .step-description {
+        font-size: 1rem;
+        line-height: 1.6;
     }
     
     .step-icon {
@@ -2501,11 +2510,11 @@ h2.main-title {
         padding: 50px 0;
     }
     
-    .step {
-        width: 260px;
+ .step {
+        width: calc(100vw - 30px);
+        min-height: 280px;
         padding: 20px 15px;
     }
-    
     .section-header {
         margin-bottom: 40px;
     }
@@ -2515,19 +2524,32 @@ h2.main-title {
     }
     
     .arrow-connector {
-        height: 35px;
-        margin: 10px 0;
+        height: 40px;
+        margin: 15px 0;
     }
     
-    .arrow-line {
-        height: 25px;
-        width: 3px;
+  .arrow-line {
+        right: 0;
+        height: 30px;
+        width: 6px;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-top: 50px solid #e85350;
     }
     
-    .arrow-head {
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 10px solid #3498db;
+     .arrow-head {
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 40px solid #e85350;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
     }
     
     .faq-section {
