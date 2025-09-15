@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
 }
@@ -64,6 +64,7 @@ body {
 }
 
 .hero-title {
+    font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.1;
@@ -157,7 +158,7 @@ body {
     left: 8px;
     color: white;
     font-size: 8px;
-    font-family: monospace;
+    /* font-family: monospace; */
 }
 
 .floating-card:nth-child(1) {
@@ -632,19 +633,19 @@ body {
 }
 
 .feature-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    color: #000;
     padding: 20px 30px;
     border-radius: 25px;
-    border: none;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
     position: relative;
     overflow: hidden;
-    width: 290px; 
+    width: 290px;
+    background-image: linear-gradient(270deg, rgba(234, 234, 234, 0) 0%, rgba(156, 194, 255, 0.9999999999999999) 100%);
+    border: 0.879172946763965px solid #f4f4f4;
 }
 
 .feature-btn::before {
@@ -732,7 +733,7 @@ body {
 
 /* ===== HOW IT WORKS SECTION ===== */
 .how-it-works-section {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 25%, #2f3542 75%, #3742fa 100%);
+   background: linear-gradient(135deg, #e61628 0%, #2d0509 25%, #000000 75%, #4e6aa9 100%);
     padding: 100px 0;
     position: relative;
     overflow: hidden;
@@ -792,8 +793,8 @@ body {
 .step {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 40px 30px;
+    border-radius: 15px;
+    padding: 50px 25px;
     text-align: center;
     position: relative;
     width: 280px;
@@ -839,16 +840,16 @@ body {
 }
 
 .step-header {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
     margin-bottom: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .step-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: white;
     margin-bottom: 25px;
@@ -858,7 +859,7 @@ body {
 
 .step-description {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
     line-height: 1.6;
     font-weight: 400;
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
@@ -900,24 +901,28 @@ body {
 }
 
 .arrow-body {
-    width: 60px;
-    height: 4px;
+    right: -15px;
+    width: 66px;
+    height: 240px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(52, 152, 219, 0.8));
     border-radius: 2px;
     position: relative;
     animation: arrowPulse 2s ease-in-out infinite;
+    border-left: 30px solid #e85350;
+    border-top: 120px solid transparent;
+    border-bottom: 120px solid transparent;
 }
 
 .arrow-head {
     position: absolute;
-    right: -8px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     width: 0;
     height: 0;
-    border-left: 12px solid #3498db;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
+    border-left: 30px solid #e85350;
+    border-top: 120px solid transparent;
+    border-bottom: 120px solid transparent;
     animation: arrowBounce 2s ease-in-out infinite;
 }
 
@@ -1337,7 +1342,7 @@ body {
     left: 30px;
     right: 30px;
     bottom: 30px;
-    font-family: 'Courier New', monospace;
+    /* font-family: 'Courier New', monospace; */
     font-size: 10px;
     color: #ff4d4d;
     opacity: 0.4;
@@ -1938,7 +1943,7 @@ body {
     }
     
     .step-title {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
     
     .step-description {
@@ -2043,7 +2048,7 @@ body {
     }
     
     .step-title {
-        font-size: 1.4rem;
+        font-size: 1.0rem;
     }
     
     .step-bg-number {
