@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color:  #203361;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            color:  #203361;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+
+    .page-header h1 {
+    margin-bottom: 15px;
+    font-size: 3rem;
+    color: #e74c3c;
+    text-align: center;
+    font-weight: 600;
+}
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .search-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .search-title {
+            text-align: center;
+            color:  #203361;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 50px;
+            padding: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #e1e5e9;
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus-within {
+            border-color: #3498db;
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.2);
+        }
+
+        .search-icon {
+            color:  #203361;
+            margin-left: 20px;
+            font-size: 1.2rem;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            background: transparent;
+        }
+
+        .search-box input::placeholder {
+            color: #9ca3af;
+        }
+
+        .search-btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+
+        .faq-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .faq-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #e53e3e;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .faq-item:nth-child(1) { animation-delay: 0.1s; }
+        .faq-item:nth-child(2) { animation-delay: 0.2s; }
+        .faq-item:nth-child(3) { animation-delay: 0.3s; }
+        .faq-item:nth-child(4) { animation-delay: 0.4s; }
+        .faq-item:nth-child(5) { animation-delay: 0.5s; }
+        .faq-item:nth-child(n+6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .faq-item:hover {
+            /* border-color: #3498db; */
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
+        }
+
+        .faq-question {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            user-select: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: inherit;
+        }
+
+        .faq-question:hover {
+            background: #f5f7fa;
+        }
+
+        .faq-question.active {
+            background:  #f5f7fa;
+            color:  #203361
+        }
+
+        .question-text {
+            flex: 1;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .faq-toggle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            color: #e53e3e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question.active .faq-toggle {
+            background: #e2e8f0;
+            color: #e53e3e;
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.3s ease;
+            background: #fff;
+        }
+
+        .faq-answer.active {
+            max-height: none;
+            padding: 30px;
+            overflow: visible;
+        }
+
+        .answer-content {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease 0.1s;
+        }
+
+        .faq-answer.active .answer-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .answer-intro {
+            font-size: 1.2rem;
+            color: #000;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #e53e3e;
+        }
+
+        .answer-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .answer-column {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .signs-column {
+            background: linear-gradient(135deg, #fed7d7 0%, #fbb6ce 100%);
+            border: 1px solid #feb2b2;
+        }
+
+        .actions-column {
+            background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%);
+            border: 1px solid #9ae6b4;
+        }
+
+        .column-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .column-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .signs-column .column-icon {
+            background: #e53e3e;
+            color: #fff;
+        }
+
+        .actions-column .column-icon {
+            background: #38a169;
+            color: #fff;
+        }
+
+        .column-header h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .signs-column .column-header h4 {
+            color: #742a2a;
+        }
+
+        .actions-column .column-header h4 {
+            color: #22543d;
+        }
+
+        .column-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .column-list li {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .column-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .column-list li::before {
+            content: '•';
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: -1px;
+        }
+
+        .signs-column .column-list li {
+            color: #742a2a;
+        }
+
+        .signs-column .column-list li::before {
+            color: #e53e3e;
+        }
+
+        .actions-column .column-list li {
+            color: #22543d;
+        }
+
+        .actions-column .column-list li::before {
+            color: #38a169;
+        }
+
+        .simple-list {
+            list-style: none;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        .simple-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e1e5e9;
+            color: #000;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .simple-list li:last-child {
+            border-bottom: none;
+        }
+
+        .simple-list li::before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 12px;
+        }
+
+        .search-highlight {
+            background: rgba(52, 152, 219, 0.1) !important;
+            border-left: 4px solid #3498db !important;
+        }
+
+        .search-results-message {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .no-results h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .no-results p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .read-more-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .read-more-btn {
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            color: #fff;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 85, 104, 0.3);
+        }
+
+        .read-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 85, 104, 0.4);
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+        }
+
+        .read-more-btn i {
+            margin-left: 8px;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .read-more-btn:hover i {
+            transform: translateX(3px);
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 500;
+            z-index: 10000;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .search-section,
+            .faq-container {
+                padding: 25px;
+            }
+
+            .answer-columns {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .search-box {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+                border-radius: 15px;
+            }
+
+            .search-btn {
+                align-self: stretch;
+            }
+
+            .faq-question {
+                padding: 20px;
+            }
+
+            .question-text {
+                font-size: 1.1rem;
+            }
+
+            .faq-toggle {
+                width: 25px;
+                height: 25px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .faq-title {
+                font-size: 2rem;
+            }
+
+            .search-section,
+            .faq-container {
+                padding: 20px;
+            }
+
+            .faq-question {
+                padding: 18px;
+            }
+
+            .question-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1><i class="fas fa-question-circle"></i> Frequently Asked Questions</h1>
+            <p>Find answers to common questions and get help quickly</p>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <h2 class="search-title">Search Our Knowledge Base</h2>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="faq-search" placeholder="Search for scam types, safety tips..." aria-label="Search knowledge base">
+                    <button class="search-btn" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Container -->
+        <div class="faq-container">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" data-faq="1">
+                    <span class="question-text">How Scammers Trick People on Social Media</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            Scammers use various sophisticated techniques on social media platforms to deceive users and steal personal information or money.
+                        </p>
+                        <ul class="simple-list">
+                            <li>Creating fake profiles that look legitimate with stolen photos</li>
+                            <li>Using emotional manipulation and urgency tactics</li>
+                            <li>Offering too-good-to-be-true deals and discounts</li>
+                            <li>Phishing through direct messages and fake links</li>
+                            <li>Romance scams targeting lonely individuals</li>
+                            <li>Fake charity campaigns during disasters</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 - Pre-opened -->
+            <div class="faq-item">
+                <button class="faq-question active" aria-expanded="true" data-faq="2">
+                    <span class="question-text">How to Detect and Handle Online Impersonation</span>
+                    <span class="faq-toggle">−</span>
+                </button>
+                <div class="faq-answer active">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            This is really scary - someone might copy your profile photo and name to create a fake account that looks exactly like you! Then they'll message your friends asking for money or make posts pretending to be you.
+                        </p>
+                        
+                        <div class="answer-columns">
+                            <div class="answer-column signs-column">
+                                <div class="column-header">
+                                    <div class="column-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h4>Signs of Impersonation</h4>
+                                </div>
+                                <ul class="column-list">
+                                    <li>Getting notifications about logins from unknown devices or cities</li>
+                                    <li>Your friends and family telling you about strange messages "from you"</li>
+                                    <li>Finding another account using your name and photos</li>
+                                    <li>Posts or activities appearing that you never did</li>
+                                </ul>
+                            </div>
+
+                            <div class="answer-column actions-column">
+                                <div class="column-header">
+                                    <div class="column-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h4>What to Do If It Happens</h4>
+                                </div>
+                                <ul class="column-list">
+                                    <li>Take screenshots immediately as proof. Don't try messaging the fake account directly</li>
+                                    <li>Report the fake account to Facebook/Instagram/WhatsApp, and change all your passwords immediately</li>
+                                    <li>Warn all your friends and family about the imposter</li>
+                                    <li>Search your name online once in a while to catch imposters early</li>
+                                    <li>Enable two-factor authentication on every account possible</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" data-faq="3">
+                    <span class="question-text">How to Spot Fake Messages on WhatsApp</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            Learn to identify suspicious messages that could be scams or phishing attempts targeting your personal information.
+                        </p>
+                        <ul class="simple-list">
+                            <li>Messages claiming you've won prizes or lotteries you never entered</li>
+                            <li>Requests for OTP or verification codes from "banks"</li>
+                            <li>Links asking for personal information or account details</li>
+                            <li>Messages with urgent threats or unrealistic deadlines</li>
+                            <li>Forwards with unverified health or news claims</li>
+                            <li>Messages from unknown numbers claiming to be relatives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" data-faq="4">
+                    <span class="question-text">How to Tell if an Online Giveaway or Contest Is Fake</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            Fake giveaways and contests are common scam tactics used to collect personal information or spread malware.
+                        </p>
+                        <div class="answer-columns">
+                            <div class="answer-column signs-column">
+                                <div class="column-header">
+                                    <div class="column-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h4>Red Flags</h4>
+                                </div>
+                                <ul class="column-list">
+                                    <li>No official verification badges on company profiles</li>
+                                    <li>Contests requiring upfront payments or fees</li>
+                                    <li>Prizes that seem unreasonably valuable</li>
+                                    <li>No clear terms and conditions</li>
+                                </ul>
+                            </div>
+
+                            <div class="answer-column actions-column">
+                                <div class="column-header">
+                                    <div class="column-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h4>How to Verify</h4>
+                                </div>
+                                <ul class="column-list">
+                                    <li>Check the company's official website and social media</li>
+                                    <li>Look for contest announcements on verified accounts</li>
+                                    <li>Verify contest rules and eligibility criteria</li>
+                                    <li>Research the company's past giveaway history</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" data-faq="5">
+                    <span class="question-text">How to Spot Fake Job Offers Online</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            Fraudulent job offers can lead to identity theft, financial loss, or becoming unknowingly involved in illegal activities.
+                        </p>
+                        <ul class="simple-list">
+                            <li>Unrealistic salary promises for simple or vague work</li>
+                            <li>Requests for upfront payments or registration fees</li>
+                            <li>Poor grammar and spelling in official communications</li>
+                            <li>Vague job descriptions with no specific requirements</li>
+                            <li>Immediate hiring without proper interviews or background checks</li>
+                            <li>Requests for personal documents before job confirmation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" data-faq="6">
+                    <span class="question-text">What to Do if You Click a Suspicious Link</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            If you accidentally click a suspicious link, take immediate action to protect your device and personal information.
+                        </p>
+                        <ul class="simple-list">
+                            <li>Close the browser tab immediately without entering any information</li>
+                            <li>Run a full antivirus scan on your device</li>
+                            <li>Change passwords for all important accounts</li>
+                            <li>Check bank and credit card statements for unusual activity</li>
+                            <li>Enable two-factor authentication on all accounts</li>
+                            <li>Monitor accounts closely for any unauthorized access</li>
+                            <li>Report the suspicious link to relevant authorities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" data-faq="7">
+                    <span class="question-text">How to Spot Dangerous Apps or APKs</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            Malicious applications can steal your data, spy on your activities, or damage your device.
+                        </p>
+                        <ul class="simple-list">
+                            <li>Only download apps from official app stores (Google Play, Apple App Store)</li>
+                            <li>Check app permissions carefully before installing</li>
+                            <li>Read user reviews and ratings thoroughly</li>
+                            <li>Verify the developer's authenticity and reputation</li>
+                            <li>Avoid apps requesting unnecessary permissions</li>
+                            <li>Never download APK files from unknown or untrusted sources</li>
+                            <li>Be wary of apps promising unrealistic features</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" data-faq="8">
+                    <span class="question-text">How to Know if a Shopping Website Is Genuine</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            Fake shopping websites can steal your payment information and personal details without delivering any products.
+                        </p>
+                        <div class="answer-columns">
+                            <div class="answer-column signs-column">
+                                <div class="column-header">
+                                    <div class="column-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <h4>What to Check</h4>
+                                </div>
+                                <ul class="column-list">
+                                    <li>HTTPS security certificate (padlock icon)</li>
+                                    <li>Complete contact information and physical address</li>
+                                    <li>Customer reviews and ratings from multiple sources</li>
+                                    <li>Clear return and refund policies</li>
+                                </ul>
+                            </div>
+
+                            <div class="answer-column actions-column">
+                                <div class="column-header">
+                                    <div class="column-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h4>Warning Signs</h4>
+                                </div>
+                                <ul class="column-list">
+                                    <li>Prices that seem too good to be true</li>
+                                    <li>Poor website design and grammar errors</li>
+                                    <li>Limited payment options or suspicious methods</li>
+                                    <li>No customer service contact information</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more FAQ items here following the same pattern... -->
+            <!-- I'll include a few more key ones -->
+
+            <!-- FAQ Item 9 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" data-faq="9">
+                    <span class="question-text">How to Protect Your Bank Account from Online Fraud</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            Banking fraud is one of the most serious forms of online scams. Learn how to keep your financial information safe.
+                        </p>
+                        <ul class="simple-list">
+                            <li>Never share your ATM PIN, CVV, or OTP with anyone</li>
+                            <li>Always type your bank's URL directly, never click links from emails</li>
+                            <li>Use only official banking apps from app stores</li>
+                            <li>Enable SMS and email alerts for all transactions</li>
+                            <li>Regularly check bank statements for unauthorized transactions</li>
+                            <li>Use separate cards for online and offline transactions</li>
+                            <li>Never use public WiFi for banking transactions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" data-faq="10">
+                    <span class="question-text">How to Create Strong Passwords and Manage Them</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p class="answer-intro">
+                            Strong passwords are your first line of defense against cybercriminals. Learn to create and manage them effectively.
+                        </p>
+                        <div class="answer-columns">
+                            <div class="answer-column actions-column">
+                                <div class="column-header">
+                                    <div class="column-icon">
+                                        <i class="fas fa-key"></i>
+                                    </div>
+                                    <h4>Creating Strong Passwords</h4>
+                                </div>
+                                <ul class="column-list">
+                                    <li>Use at least 12 characters with mixed case, numbers, symbols</li>
+                                    <li>Avoid personal information like birthdays or names</li>
+                                    <li>Use unique passwords for each account</li>
+                                    <li>Consider using passphrases instead of passwords</li>
+                                </ul>
+                            </div>
+
+                            <div class="answer-column signs-column">
+                                <div class="column-header">
+                                    <div class="column-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h4>Password Management</h4>
+                                </div>
+                                <ul class="column-list">
+                                    <li>Use a reputable password manager</li>
+                                    <li>Enable two-factor authentication everywhere</li>
+                                    <li>Regularly update passwords for important accounts</li>
+                                    <li>Never share passwords with others</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="read-more-container">
+            <button class="read-more-btn">
+                <span>Need More Help?</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced FAQ functionality with search
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const searchInput = document.querySelector('#faq-search');
+            const searchBtn = document.querySelector('.search-btn');
+            
+            // FAQ Toggle Functionality
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', () => {
+                    const isActive = question.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        const otherQuestion = otherItem.querySelector('.faq-question');
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        const otherToggle = otherItem.querySelector('.faq-toggle');
+                        
+                        if (otherItem !== item) {
+                            otherQuestion.classList.remove('active');
+                            otherAnswer.classList.remove('active');
+                            otherToggle.textContent = '+';
+                            otherQuestion.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isActive) {
+                        question.classList.remove('active');
+                        answer.classList.remove('active');
+                        toggle.textContent = '+';
+                        question.setAttribute('aria-expanded', 'false');
+                    } else {
+                        question.classList.add('active');
+                        answer.classList.add('active');
+                        toggle.textContent = '−';
+                        question.setAttribute('aria-expanded', 'true');
+                        
+                        // Smooth scroll to question
+                        setTimeout(() => {
+                            question.scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }, 300);
+                    }
+                });
+                
+                // Keyboard support
+                question.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        question.click();
+                    }
+                });
+            });
+            
+            // Search functionality
+            function performSearch(searchTerm) {
+                searchTerm = searchTerm.toLowerCase().trim();
+                
+                if (searchTerm.length >= 2) {
+                    let foundResults = false;
+                    
+                    faqItems.forEach(item => {
+                        const questionText = item.querySelector('.question-text').textContent.toLowerCase();
+                        const answerText = item.querySelector('.answer-content').textContent.toLowerCase();
+                        
+                        if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                            item.style.display = 'block';
+                            item.classList.add('search-highlight');
+                            foundResults = true;
+                        } else {
+                            item.style.display = 'none';
+                            item.classList.remove('search-highlight');
+                        }
+                    });
+                    
+                    // Show search results message
+                    showSearchResults(foundResults, searchTerm);
+                } else {
+                    // Show all items if search term is too short
+                    faqItems.forEach(item => {
+                        item.style.display = 'block';
+                        item.classList.remove('search-highlight');
+                    });
+                    hideSearchResults();
+                }
+            }
+            
+            function showSearchResults(foundResults, searchTerm) {
+                let resultsMessage = document.querySelector('.search-results-message');
+                
+                if (!resultsMessage) {
+                    resultsMessage = document.createElement('div');
+                    resultsMessage.className = 'search-results-message';
+                    
+                    const faqContainer = document.querySelector('.faq-container');
+                    faqContainer.parentNode.insertBefore(resultsMessage, faqContainer);
+                }
+                
+                if (!foundResults) {
+                    resultsMessage.innerHTML = `
+                        <div class="no-results">
+                            <h3>No results found for "${searchTerm}"</h3>
+                            <p>Try searching with different keywords or browse all questions below.</p>
+                        </div>
+                    `;
+                    resultsMessage.style.display = 'block';
+                } else {
+                    resultsMessage.style.display = 'none';
+                }
+            }
+            
+            function hideSearchResults() {
+                const resultsMessage = document.querySelector('.search-results-message');
+                if (resultsMessage) {
+                    resultsMessage.style.display = 'none';
+                }
+            }
+            
+            function showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.textContent = message;
+                notification.className = `notification ${type}`;
+                
+                const bgColors = {
+                    success: '#27ae60',
+                    warning: '#f39c12',
+                    error: '#e74c3c',
+                    info: '#3498db'
+                };
+                notification.style.background = bgColors[type] || bgColors.info;
+                
+                document.body.appendChild(notification);
+                setTimeout(() => notification.remove(), 3000);
+            }
+            
+            // Search input event listener
+            if (searchInput) {
+                // Debounce search function
+                let searchTimeout;
+                searchInput.addEventListener('input', function() {
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(() => {
+                        performSearch(this.value);
+                    }, 300);
+                });
+                
+                searchInput.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        performSearch(this.value);
+                    }
+                });
+            }
+            
+            // Search button event listener
+            if (searchBtn) {
+                searchBtn.addEventListener('click', function() {
+                    performSearch(searchInput.value);
+                });
+            }
+            
+            // Read More Button
+            const readMoreBtn = document.querySelector('.read-more-btn');
+            if (readMoreBtn) {
+                readMoreBtn.addEventListener('click', () => {
+                    // Scroll to next section or contact form
+                    const nextSection = document.querySelector('#contact, .footer-section, footer');
+                    if (nextSection) {
+                        nextSection.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    } else {
+                        // If no next section, show a notification
+                        showNotification('Contact us for more help!', 'info');
+                    }
+                });
+            }
+
+            // Show initialization success notification
+            setTimeout(() => {
+                showNotification('FAQ system ready! 🚀', 'success');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
