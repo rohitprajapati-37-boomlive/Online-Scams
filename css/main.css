@@ -1026,7 +1026,7 @@ body {
 }
 
 .faq-toggle.active {
-    transform: rotate(45deg);
+    transform: rotate(180deg);
     color: #c0392b;
 }
 
