@@ -13,7 +13,7 @@ body {
 
 /* Container */
 .container {
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
@@ -41,6 +41,19 @@ body {
     overflow: hidden;
     /* Add banner animation */
     animation: bannerShift 20s ease-in-out infinite;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(202deg, #050505 0%, #000000 45%, #9a2d2d 75%, #4e6aa9 100%
+100%
+);
+    opacity: 0.6;
 }
 
 /* Background Pattern */
@@ -1123,7 +1136,7 @@ h2.main-title {
     align-items: center;
     justify-content: center;
     gap: 0;
-    max-width: 1300px;
+    max-width: 1100px;
     margin: 0 auto;
     position: relative;
 }
