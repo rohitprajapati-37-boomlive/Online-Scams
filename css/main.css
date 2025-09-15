@@ -1026,7 +1026,7 @@ body {
 }
 
 .faq-toggle.active {
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
     color: #c0392b;
 }
 
@@ -1787,13 +1787,18 @@ body {
     }
     
     .arrow-head {
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 12px solid #3498db;
-        border-bottom: none;
-        right: 50%;
-        top: -8px;
-        transform: translateX(50%);
+        border-right: 20px solid transparent;
+        top: -10px;
+        right: -15px;
+        width: 66px;
+        height: 240px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(52, 152, 219, 0.8));
+        border-radius: 2px;
+        position: relative;
+        animation: arrowPulse 2s ease-in-out infinite;
+        border-left: 30px solid #e85350;
+        border-top: 120px solid transparent;
+        border-bottom: 120px solid transparent;
     }
 }
 
