@@ -1742,12 +1742,9 @@ h2.main-title {
 
 .hacker-container {
     position: relative;
-    width: 650px;
+ width: 500px;
     height: 420px;
-    background: linear-gradient(135deg, 
-        rgba(139, 0, 0, 0.9) 0%, 
-        rgba(178, 34, 34, 0.7) 50%, 
-        rgba(220, 20, 60, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.9) 0%, rgba(178, 34, 34, 0.7) 50%, rgba(220, 20, 60, 0.5) 100%);
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -1785,20 +1782,20 @@ h2.main-title {
     left: 0px;
     right: auto;
     bottom: auto;
-    background: rgba(0, 0, 0, 0.8);
+    /* background: rgba(0, 0, 0, 0.8); */
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid rgba(255, 51, 51, 0.4);
+    /* border: 1px solid rgba(255, 51, 51, 0.4); */
     backdrop-filter: blur(10px);
     max-width: 270px;
     max-height: 425px;
     overflow: hidden;
-    z-index: 3;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); */
 }
 
 .error-code {
-    color: #ff4444;
+    color: #e75040;
    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     margin-bottom: 6px;
@@ -2649,6 +2646,8 @@ h2.main-title {
         left: 0px;
         padding: 12px;
         max-width: 150px;
+        z-index: 0;
+        background: rgb(140 24 22);
     }
     
     .error-code {
