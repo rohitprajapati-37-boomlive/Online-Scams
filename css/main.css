@@ -1908,6 +1908,11 @@ bottom: -25px;
         border-radius: 20px;
         gap: 0px;
     }
+    .how-it-works-section{
+        background-image: url(../images/step-how-to-work-for-mobile-view.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
     .steps-container {
         grid-template-columns: 1fr;
         gap: 50px;
