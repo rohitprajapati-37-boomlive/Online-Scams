@@ -2335,6 +2335,9 @@ h2.main-title {
     
     .how-it-works-section {
         padding: 60px 0;
+        background-image: url(/images/step-how-to-work-for-mobile-view.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     }
     
     .section-header {
