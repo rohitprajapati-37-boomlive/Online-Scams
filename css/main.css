@@ -744,7 +744,7 @@ bottom: -25px;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(/images/how-to-steps.png);
+    background-image: url(../images/how-to-steps.png);
         background-size: cover;
     background-repeat: no-repeat;
 }
