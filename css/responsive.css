@@ -1039,9 +1039,11 @@ body {
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    display: flex
-;
+    display: flex;
     align-items: center;
+        background-image: url(/images/how-to-steps.png);
+        background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .how-it-works-section::before {
@@ -1699,6 +1701,10 @@ h2.main-title {
     align-items: center;
     padding: 80px 0;
     z-index: 2;
+        background-image: url(../images/Footer_banner_hacker.png);
+    background-position: center;
+    background-size: cover;
+    opacity: calc(0.9 + (1 - var(--scroll, 0)) * 0.1);
 }
 
 .footer-section::before {
@@ -1775,8 +1781,8 @@ h2.main-title {
 
 .hacker-overlay {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: -5px;
+    left: 0px;
     right: auto;
     bottom: auto;
     background: rgba(0, 0, 0, 0.8);
@@ -1784,8 +1790,8 @@ h2.main-title {
     border-radius: 10px;
     border: 1px solid rgba(255, 51, 51, 0.4);
     backdrop-filter: blur(10px);
-    max-width: 350px;
-    max-height: 300px;
+    max-width: 270px;
+    max-height: 425px;
     overflow: hidden;
     z-index: 3;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -1846,9 +1852,9 @@ h2.main-title {
 
 .scam-alert-card {
     position: absolute;
-    top: -60px;
-    right: -40px;
-    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    top: -85px;
+    right: 0px;
+    /* background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%); */
     width: 130px;
     height: 110px;
     border-radius: 12px;
@@ -1865,7 +1871,7 @@ h2.main-title {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.scam-alert-card::before {
+/* .scam-alert-card::before {
     content: '';
     position: absolute;
     top: -8px;
@@ -1877,7 +1883,7 @@ h2.main-title {
     border-right: 12px solid transparent;
     border-bottom: 12px solid #ff4444;
     z-index: -1;
-}
+} */
 
 .alert-icon {
     background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
@@ -1904,7 +1910,10 @@ h2.main-title {
     letter-spacing: 0.5px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-
+.scam-alert-image img {
+    width: 180px;
+    height: 180px;
+}
 .remember-title {
     font-size: 5rem;
     color: #e74c3c;
@@ -2212,6 +2221,7 @@ h2.main-title {
         position: relative;
         top: 0;
         right: 0;
+        margin: 0 auto;
         margin-bottom: 30px;
         transform: rotate(0deg);
         display: inline-block;
@@ -2436,6 +2446,13 @@ h2.main-title {
         height: 260px;
     }
     
+.scam-alert-image img {
+    width: 110px;
+    height: 110px;
+}
+
+
+
     .hacker-overlay {
         top: 20px;
         left: 20px;
@@ -2452,8 +2469,11 @@ h2.main-title {
         font-size: 3rem;
     }
     
-    .description-box {
+   .description-box {
         padding: 20px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
     }
     
     .description-box p {
@@ -2622,10 +2642,10 @@ h2.main-title {
     }
     
     .hacker-overlay {
-        top: 15px;
-        left: 15px;
+        top: 0px;
+        left: 0px;
         padding: 12px;
-        max-width: 130px;
+        max-width: 150px;
     }
     
     .error-code {

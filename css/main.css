@@ -1458,7 +1458,7 @@ bottom: -25px;
 }
 
 /* Scam Alert Badge */
-.scam-alert-badge {
+/* .scam-alert-badge {
     position: absolute;
     top: -30px;
     right: -20px;
@@ -1489,8 +1489,26 @@ bottom: -25px;
     border-right: 15px solid transparent;
     border-bottom: 15px solid #ff4444;
     filter: drop-shadow(0 -3px 5px rgba(0,0,0,0.3));
+} */
+.scam-alert-image{
+    position: absolute;
+    top: -50px;
+    right: -85px;
+    transform: rotate(15deg);
+    /* background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); */
+    padding: 0px 0px;
+    border-radius: 18px;
+    /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 0 3px rgba(255, 68, 68, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.8); */
+    z-index: 15;
+    transition: all 0.4s ease;
+    min-width: 120px;
+    text-align: center;
+    animation: alertBounce 5s ease-in-out infinite;
 }
-
+.scam-alert-image img {
+    width: 180px;
+    height: 180px;
+}
 .alert-icon {
     background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
     color: white;
@@ -1519,11 +1537,11 @@ bottom: -25px;
     text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-.scam-alert-badge:hover {
+/* .scam-alert-badge:hover {
     transform: rotate(15deg) scale(1.08);
     box-shadow: 0 20px 60px rgba(0,0,0,0.7);
     animation-play-state: paused;
-}
+} */
 
 /* Footer Copyright */
 .footer-copyright {
@@ -1937,6 +1955,10 @@ bottom: -25px;
         height: auto;
         text-align: center;
     }
+
+      .remember-section {
+        margin-top: 120px;
+    }
     .remember-title {
         font-size: 3.2rem;
         text-align: center;
@@ -1955,6 +1977,17 @@ bottom: -25px;
         margin: 0 auto 30px;
         display: inline-block;
     }
+
+.scam-alert-image{
+        top: 0px;
+    right: 0px;
+}
+
+.scam-alert-image img {
+    width: 130px;
+    height: 130px;
+}
+
     /* .footer-image-section {
         margin-bottom: -20px;
     } */
