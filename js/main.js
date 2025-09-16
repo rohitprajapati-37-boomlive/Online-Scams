@@ -282,9 +282,9 @@ function initializeWebsite() {
         console.log('✅ Website initialized successfully!');
         
         // Welcome notification
-        setTimeout(() => {
-            showNotification('FAQ system ready! 🚀', 'success');
-        }, 1000);
+        // setTimeout(() => {
+        //     showNotification('FAQ system ready! 🚀', 'success');
+        // }, 1000);
         
     } catch (error) {
         console.error('❌ Initialization error:', error);
