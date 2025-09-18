@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scam-Check: Common Questions & Answers</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+
+    <link rel="stylesheet" href="./css/responsive.css">
+
+<style>
+    /* Back Button Styles - ADD THESE */
+    .back-btn {
+        background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        text-decoration: none;
+    }
+
+    .back-btn:hover {
+        background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .back-btn i {
+        font-size: 0.9rem;
+    }
+
+    /* Your existing page styles */
+    .page-header {
+        text-align: center;
+        color: #203361;
+        margin-bottom: 40px;
+        padding: 10px 0;
+    }
+
+    .page-header h1 {
+        margin-bottom: 15px;
+        font-size: 3rem;
+        color: #e74c3c;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .page-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
+    .search-section {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .search-title {
+        text-align: center;
+        color: #203361;
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+    }
+
+    .search-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .search-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 50px;
+        padding: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: 2px solid #e1e5e9;
+        transition: all 0.3s ease;
+    }
+
+    .search-box:focus-within {
+        border-color: #3498db;
+        box-shadow: 0 5px 20px rgba(52, 152, 219, 0.2);
+    }
+
+    .search-icon {
+        color: #203361;
+        margin-left: 20px;
+        font-size: 1.2rem;
+    }
+
+    .search-box input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        background: transparent;
+    }
+
+    .search-box input::placeholder {
+        color: #9ca3af;
+    }
+
+    .search-btn {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .search-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+</style>
+    
+</head>
+<body>
+    <div class="container">
+
+        <!-- Back Button - ADD THIS -->
+        <button onclick="goBack()" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>
+          <i class="fas fa-shield-alt"></i> Scam-Check: Common Questions & Answers
+        </h1>
+        <!-- <p>Stay safe online with expert tips and guidance</p> -->
+      </div>
+
+      <!-- Search Section -->
+      <div class="search-section">
+        <h2 class="search-title">Search Our Knowledge Base</h2>
+        <div class="search-container">
+          <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              id="faq-search"
+              placeholder="Search for scam types, safety tips..."
+              aria-label="Search knowledge base"
+            />
+            <button class="search-btn" type="button">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Container -->
+      <div class="faq-container">
+        <!-- <h2 class="faq-title">Frequently Asked Questions</h2> -->
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="1">
+            <span class="question-text">How Scammers Trick People on Social Media</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                You know those amazing deals advertised on Facebook and Instagram? Most are likely to be fake! Scammers create fake profiles and post unbelievable offers, like "Rs 10,000 in cashback!", or "Scratch and Win a motorbike!" to tempt you into clicking the link.
+              </p>
+              <p class="answer-intro">
+                Once you click on it, it may lead you to a fake website or prompt you to call them and share your personal details to siphon off your money. They'll pretend to be your friend, some famous influencer, or even big brands like Samsung or Flipkart.
+              </p>
+              
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Signs of a Scam</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Profiles with very few posts or followers</li>
+                    <li>Offers that seem too good to be true (like an iPhone for ₹5,000)</li>
+                    <li>Creating a sense of urgency by saying, "Send money now or miss this chance!"</li>
+                    <li>Web addresses with mistakes (like "flipkart.co.in" instead of "flipkart.com")</li>
+                    <li>Fake URLs either have too many short forms or typos, or they end in .tk, .ml, .xyz instead of .com or .in</li>
+                    <li>No HTTPS security lock in the address bar</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Always check if the profile looks genuine before trusting. Read its reviews on Google</li>
+                    <li>Check the URL to see if it matches the domain name of official websites like 'Amazon.in' or 'Flipkart.com'</li>
+                    <li>Don't share personal info like phone number, address, or Aadhaar at any point</li>
+                    <li>Check for a trusted payment system, like Razorpay or Paytm</li>
+                    <li>Report and block any suspicious accounts immediately</li>
+                    <li>Look for the green lock before clicking anything!</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question active" aria-expanded="true" data-faq="2">
+            <span class="question-text">How to Detect and Handle Online Impersonation</span>
+            <span class="faq-toggle">−</span>
+          </button>
+          <div class="faq-answer active">
+            <div class="answer-content">
+              <p class="answer-intro">
+                This is really scary - someone might copy your profile photo and name to create a fake account that looks exactly like you! Then they'll message your friends asking for money or make posts pretending to be you.
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Signs of Impersonation</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Getting notifications about logins from unknown devices or cities</li>
+                    <li>Your friends and family telling you about strange messages "from you"</li>
+                    <li>Finding another account using your name and photos</li>
+                    <li>Posts or activities appearing that you never did</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do If It Happens</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Take screenshots immediately as proof. Don't try messaging the fake account directly</li>
+                    <li>Report the fake account to Facebook/Instagram/WhatsApp, and change all your passwords immediately</li>
+                    <li>Warn all your friends and family about the imposter</li>
+                    <li>Search your name online once in a while to catch imposters early</li>
+                    <li>Enable two-factor authentication on every account possible</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="3">
+            <span class="question-text">How to Spot Fake Messages on WhatsApp</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                WhatsApp forwards are the worst! Fraudsters spread fake offers, dangerous links, or panic-creating messages, hoping you'll click without thinking or forward them to your family groups.
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Messages full of spelling and grammar mistakes</li>
+                    <li>"Do this, or something bad will happen to your family"</li>
+                    <li>Suspicious links that don't match what they claim to show</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Always check with reliable news sources before believing anything</li>
+                    <li>Don't click links from unknown people</li>
+                    <li>Report fake messages to WhatsApp</li>
+                    <li>Use fact-checking websites when you're confused</li>
+                    <li>Forward it to BOOM's WhatsApp tipline: 7700906588. We'll help you figure it out, at no charge</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="4">
+            <span class="question-text">How to Tell if an Online Giveaway or Contest Is Fake</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                "Congratulations! You've won an iPhone 15!" - sounds familiar? These fake contests pop up everywhere, especially during Diwali or the New Year. Scammers pretend to be popular brands or celebrities to get you to click, and then steal your information.
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>No blue verification tick on the account</li>
+                    <li>Asking you to pay "delivery charges" for your "free" prize</li>
+                    <li>Brand new accounts with no real history or posts</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Always check the brand's official page or website directly</li>
+                    <li>Real giveaways never ask for Aadhaar number or bank details</li>
+                    <li>Report fake contests to the platform immediately</li>
+                    <li>Before you click, forward it to BOOM's WhatsApp tipline: 7700906588. We'll help you figure it out, at no charge. Stay safe online!</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="5">
+            <span class="question-text">How to Spot Fake Job Offers Online</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                Looking for a job? Be extra careful! Scammers target job seekers with fake opportunities promising high salaries for easy work-from-home positions. But they always want money up front.
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Jobs asking for registration fees, visa fees or security deposits</li>
+                    <li>Fast-moving recruitment process. Genuine hiring takes at least two to three weeks</li>
+                    <li>Getting selected without any proper interview or discussion</li>
+                    <li>Email IDs that look suspicious (not from the official company domain)</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Research the company properly on Google before applying</li>
+                    <li>Check the company's LinkedIn page, if any</li>
+                    <li>Use only trusted job portals like Naukri.com, Indeed, or Monster</li>
+                    <li>Report fake job postings to the website and warn others</li>
+                    <li>Remember: You should never pay money to get a job!</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="6">
+            <span class="question-text">What to Do If You Click a Suspicious Link</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                Oops! Clicked a link you shouldn't have? Don't panic, but you need to act quickly to protect yourself.
+              </p>
+              <ul class="simple-list">
+                <li>Disconnect from WiFi and mobile data right away</li>
+                <li>Run a complete antivirus scan on your phone or computer</li>
+                <li>Change all your important passwords immediately</li>
+                <li>If you entered banking details, call your bank's customer care number right now</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 7 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="7">
+            <span class="question-text">How to Spot Dangerous Apps or APKs</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                Never download apps from random places, such as suspicious websites or strangers entering your WhatsApp chats! Scammers create fake apps that look real but actually install malware on your phone to steal your banking information or spy on everything you do.
+              </p>
+              <p class="answer-intro">
+                What is malware? Malware (malicious software) is any intrusive software developed by scammers to steal data and damage or destroy your devices.
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Apps only available outside the Google Play Store or Apple App Store</li>
+                    <li>Asking for weird permissions like reading all your SMS or contacts</li>
+                    <li>Very few reviews, or reviews that all sound fake and similar</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Only download from official app stores</li>
+                    <li>Read carefully what permissions the app is asking for</li>
+                    <li>Never download APK files sent through WhatsApp, Telegram, or SMS</li>
+                    <li>Still confused? Forward it to BOOM's WhatsApp tipline: 7700906588. We'll help you figure it out, at no charge. Stay safe online!</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 8 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="8">
+            <span class="question-text">How to Know if a Shopping Website Is Genuine</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                Festival season means lots of online shopping and lots of too good to be true offers, but fake shopping websites are everywhere! They take your money and never send anything.
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>No customer care phone number or physical address listed anywhere</li>
+                    <li>Prices that are unrealistically cheap (branded shoes for ₹500, etc.)</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Read customer reviews on multiple websites</li>
+                    <li>Always choose cash on delivery for new or unknown sellers</li>
+                    <li>Check their return and refund policy very carefully</li>
+                    <li>Check details about the website on bigdomaindata.com. If you notice the domain was registered just last week or recently, it's a red flag, as most legitimate businesses don't have brand-new domains</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 9 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="9">
+            <span class="question-text">How Scammers Trick People in Banking Scams</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                Your bank will NEVER call asking for your PIN, OTP, or password. If someone calls claiming to be from SBI, HDFC, or any bank asking for these details, it's 100% a scam.
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Requests like - "Sir, your account will be blocked if you don't share your OTP right now"</li>
+                    <li>SMS links saying "Update your KYC immediately to avoid account closure"</li>
+                    <li>Creating panic about suspicious transactions you need to "verify"</li>
+                    <li>Creating urgency that the task needs to be done now</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Hang up immediately and don't share anything</li>
+                    <li>Call your bank directly using the customer care number from their official website, or visit your nearest branch</li>
+                    <li>Remember: Banks never ask for OTP, PIN, or password over phone or SMS</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 10 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="10">
+            <span class="question-text">How to Check if a Payment Link or QR Code Is Safe</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                UPI payments are super convenient, but scammers are now misusing QR codes and payment links to trick people into sending money instead of receiving it.
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>QR codes sent by strangers on WhatsApp saying "scan to get a refund"</li>
+                    <li>People are pressuring you to scan codes urgently for an emergency</li>
+                    <li>Payment requests where the sender's name doesn't match who claims to be sending</li>
+                    <li>QR code leads you to a website that doesn't match the original requirement of payment at all</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Check the preview link of the QR code before clicking - wherever possible</li>
+                    <li>Always verify with the person directly before scanning any QR code</li>
+                    <li>Double-check the recipient name and amount before confirming any UPI payment</li>
+                    <li>Remember: You never need to "approve" or "accept" anything to receive money</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 11 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="11">
+            <span class="question-text">What to Do If You Get a Fake Bank Call or SMS</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                Got a scary call or message saying there's some urgent problem with your bank account? 99% of the time it's scammers trying to make you panic and share your details.
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Caller asking you to share OTP or PIN to "secure" your account</li>
+                    <li>Threats like "Your account will be permanently blocked in 2 hours"</li>
+                    <li>SMS with links claiming to fix urgent account problems</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Hang up immediately and don't respond to such messages</li>
+                    <li>Report the phone number to your bank and https://www.cybercrime.gov.in</li>
+                    <li>Block the number on your phone so they can't call again</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 12 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="12">
+            <span class="question-text">How to Spot Fake UPI Payment Requests</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                This is a new trick where scammers send you UPI "collect money" requests, hoping you'll approve them, thinking you're receiving money. But you're actually sending your money to them!
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Unexpected payment requests from unknown phone numbers</li>
+                    <li>Messages like "Please accept this payment request to receive your cashback"</li>
+                    <li>Phone numbers sending you text messages on UPI apps</li>
+                    <li>Confusing payment descriptions designed to trick you</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Remember: To receive money through UPI, you don't need to approve anything</li>
+                    <li>Legitimate payment requests from Apple, Spotify or Indigo, etc., don't send text messages on UPI apps</li>
+                    <li>Ignore and block all unknown payment requests immediately</li>
+                    <li>Do not turn on auto-pay for any payment request you don't recognise</li>
+                    <li>Report suspicious requests to your UPI app (PhonePe, Paytm, GPay)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 13 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="13">
+            <span class="question-text">How Fake Loan and Investment Scams Work</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                Need money urgently? Scammers know people are desperate and offer instant loans or investment schemes with guaranteed high returns. It's always a trap!
+              </p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>"Get ₹5 lakh loan in 30 minutes, no documents required"</li>
+                    <li>Investment schemes promising to double your money in 30 days</li>
+                    <li>Companies not registered with the RBI claiming to offer loans</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Check if the lender is properly registered with the RBI on their official website</li>
+                    <li>Never pay registration fees, processing charges, or any money before getting a loan</li>
+                    <li>If something sounds too good to be true, it definitely is</li>
+                    <li>Visit the offline address/nearest branch/ official website</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 14 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="14">
+            <span class="question-text">What Is A "Digital Arrest"? Is It Legal?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">
+                A "digital arrest" is a sophisticated and completely fraudulent tactic used by cybercriminals to extort money and sensitive personal information. It is a scam where fraudsters impersonate law enforcement officials or government agencies (like the CBI, ED, RBI, or local police) to intimidate victims into believing they are under a "digital arrest."
+              </p>
+              <p class="answer-intro">
+                There is no such legal provision as "digital arrest" under Indian law. Credible authorities do not conduct arrests over the phone or via a video call.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 15 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="15">
+            <span class="question-text">How to Stay Safe From "Digital Arrest"?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Threats of immediate arrest over the phone or a video call</li>
+                    <li>Demands for urgent payment to "settle" a case</li>
+                    <li>The caller asks you to stay on the line and isolate yourself from others</li>
+                    <li>Requests for sensitive personal or banking details, such as your Aadhaar number, bank account details, or OTPs</li>
+                    <li>Fake documents like forged FIRs or court notices sent over WhatsApp</li>
+                    <li>The caller uses an unknown or international number</li>
+                    <li>The caller demands payment into a personal bank account rather than an official government account</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Do not panic or get intimidated. Remember that a legitimate arrest is never conducted this way</li>
+                    <li>Do not engage in a conversation. Hang up the call and block the number</li>
+                    <li>Never provide any personal, financial, or confidential details</li>
+                    <li>If you are genuinely concerned, do not use the contact information provided by the caller. Instead, contact the official agency mentioned (e.g. ED, CBI, local police) through their official website or a publicly listed helpline</li>
+                    <li>Talk to your family and friends about the scam to raise awareness</li>
+                    <li>Even if you haven't lost money, reporting the scam is crucial. Report it to https://www.cybercrime.gov.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 16 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="16">
+            <span class="question-text">How to Confirm if Something Is a Scam Safely</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">Not sure if an offer is real or fake? Here's how to check safely without falling into their trap:</p>
+              <ul class="simple-list">
+                <li>Google the company name along with words like "scam," "fraud," or "fake"</li>
+                <li>Go directly to the official website (don't click links from messages)</li>
+                <li>Ask in family WhatsApp groups - someone might have seen similar scams</li>
+                <li>Use online scam-checking services and websites</li>
+                <li>Check details about the viral website/link on bigdomaindata.com. If you notice the domain was registered just last week or recently, it's a red flag, as most legitimate businesses don't have brand-new domains. You see the registrant information is hidden; it's common for scammers</li>
+                <li>Forward it to BOOM's WhatsApp tipline: 7700906588. We'll help you figure it out, at no charge</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 17 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="17">
+            <span class="question-text">How to Keep Your Personal Information Safe</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">Your personal information is like gold for scammers. Once they have your details, they can misuse them in countless ways to cheat you and others.</p>
+              <ul class="simple-list">
+                <li>Use different, strong passwords for every account (not your birthday or "123456" or your pet's name)</li>
+                <li>Turn on two-factor authentication on all important accounts</li>
+                <li>Turn on multi-factor authentication for enhanced security</li>
+                <li>Don't share personal details unnecessarily on Facebook, Instagram, etc. - Scammers can use these to guess your passwords</li>
+                <li>Think carefully before downloading new apps or clicking on unknown links</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 18 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="18">
+            <span class="question-text">What to Do If You Shared OTP or PIN by Mistake</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">Shared your OTP, PIN, or password with someone? This is very serious - you need to act right now!</p>
+              <ul class="simple-list">
+                <li>Call your bank's customer care immediately and ask them to block all transactions and your card</li>
+                <li>Change your net banking password, UPI PIN, and ATM PIN right away</li>
+                <li>Keep checking your bank account every few hours for unauthorised transactions</li>
+                <li>File a complaint with cybercrime if any money was stolen. You can report the scam on https://www.cybercrime.gov.in</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 19 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="19">
+            <span class="question-text">Common Mistakes People Make with Scams</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">Even smart, educated people fall for scams because they make these common mistakes:</p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Mistakes</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Believing urgent threats without taking time to verify ("Your account closes in 1 hour!")</li>
+                    <li>Clicking links without checking where they actually lead</li>
+                    <li>Sharing OTPs because some "bank officer" or "customer care executive" asked</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>How to Avoid</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Always pause and think calmly before acting on any urgent message</li>
+                    <li>Verify independently with official sources before believing claims</li>
+                    <li>Stay updated about new scam techniques by following reliable news sources</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 20 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="20">
+            <span class="question-text">How to Tell If a Charity Appeal Is Fake</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">During floods, earthquakes, or other disasters, scammers create fake donation appeals to steal money from people who want to help.</p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>No proper registration number or details of the NGO</li>
+                    <li>High pressure to donate immediately ("only 2 hours left!")</li>
+                    <li>Asking you to transfer money to personal bank accounts instead of official platforms</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Donate only to well-known, registered NGOs with proper credentials</li>
+                    <li>Use official donation platforms like government portals</li>
+                    <li>Research the organisation online before giving any money</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 21 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="21">
+            <span class="question-text">What Are Fake Tech Support Scams</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">"Your computer has a virus! Call this number immediately!" - these scary pop-ups are completely fake. Microsoft, Apple, or Google never work like this.</p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Unexpected calls claiming your computer or phone has problems</li>
+                    <li>Pop-up messages saying your device is infected and needs immediate fixing</li>
+                    <li>People asking you to install remote control apps like TeamViewer</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Close these pop-ups immediately without clicking anything</li>
+                    <li>Never give strangers remote access to your phone or computer</li>
+                    <li>If you have real tech problems, contact official customer support directly</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 22 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="22">
+            <span class="question-text">How Lottery and Prize Scams Work</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">"Congratulations! You have won ₹25 lakhs in KBC lottery!" - but you never participated in any lottery? It's definitely a scam.</p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Winning contests or lotteries you never entered</li>
+                    <li>Being asked to pay "processing fees" or "tax" before getting your prize</li>
+                    <li>Messages with poor grammar and spelling from unofficial numbers</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Remember: You cannot win something you never participated in</li>
+                    <li>Real prizes never require upfront payments of any kind</li>
+                    <li>Delete such messages immediately and block the numbers</li>
+                    <li>Forward the suspicious message or link to BOOM's WhatsApp tipline: 7700906588. We'll help you figure it out, at no charge. Stay safe online!</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 23 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="23">
+            <span class="question-text">How to Tell If a Family Emergency Message Is Real</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">This is the most emotionally manipulative scam - fraudsters pretend to be your relative in trouble and ask for an urgent money transfer.</p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Unexpected calls saying "Uncle, I'm in the police station, need ₹50,000 urgently"</li>
+                    <li>Asking you to keep it secret from other family members</li>
+                    <li>Refusing to talk on a video call, claiming the phone camera is broken</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Always call the family member directly on their known phone number</li>
+                    <li>Verify with other relatives before sending any money</li>
+                    <li>Remember: Real emergencies can wait 10 minutes for proper verification</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 24 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" data-faq="24">
+            <span class="question-text">How to Tell If an Email Is Real</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              <p class="answer-intro">You may have received fishy emails from IDs pretending to be your manager or your HR official. They will claim to have "lost their phone" or pretend to be caught in an emergency and need you to send them some money. Sometimes they may even say they have bought "gift cards" for all employees and ask you to click on a link to avail the gift. But these are always fake.</p>
+
+              <div class="answer-columns">
+                <div class="answer-column signs-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Red Flags</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Emails from a different ID than that of your manager's real company ID</li>
+                    <li>Claiming to be in an emergency, like "my phone was stolen"</li>
+                    <li>Not sharing their original phone number or official email address in the body of the email</li>
+                    <li>Asking you to click on a link or make a phone call to a different person</li>
+                  </ul>
+                </div>
+
+                <div class="answer-column actions-column">
+                  <div class="column-header">
+                    <div class="column-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>What to Do</h4>
+                  </div>
+                  <ul class="column-list">
+                    <li>Always call the manager or senior directly on their known phone number to confirm</li>
+                    <li>Ask your colleagues if they have received a similar email. Notify the HR as well, to send a company-wide warning</li>
+                    <li>Remember: Real emergencies can wait 10 minutes for proper verification</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="read-more-container">
+        <button class="read-more-btn">
+          <span>Need More Help? Contact Us</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div> -->
+
+      <div style="text-align: center; margin-top: 40px; padding: 20px 0; border-top: 2px solid #e2e8f0;">
+        <!-- <p style="font-size: 1.1rem; color: #4a5568; font-weight: 500;">
+          <i class="fas fa-heart" style="color: #e53e3e;"></i> 
+          Remember: Scammers are getting smarter every day, but staying alert and following these tips will keep you and your family safe. Share this with everyone you care about!
+        </p> -->
+      </div>
+    </div>
+
+    <script>
+
+
+
+      // Back Button Function - ADD THIS
+      function goBack() {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          // Fallback: redirect to home page
+          window.location.href = 'index.html'; // Change this to your home page URL
+        }
+      }
+
+
+
+
+      // Enhanced FAQ functionality with search
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item");
+        const searchInput = document.querySelector("#faq-search");
+        const searchBtn = document.querySelector(".search-btn");
+
+        // FAQ Toggle Functionality
+        faqItems.forEach((item) => {
+          const question = item.querySelector(".faq-question");
+          const answer = item.querySelector(".faq-answer");
+          const toggle = item.querySelector(".faq-toggle");
+
+          question.addEventListener("click", () => {
+            const isActive = question.classList.contains("active");
+
+            // Close all other FAQ items
+            faqItems.forEach((otherItem) => {
+              const otherQuestion = otherItem.querySelector(".faq-question");
+              const otherAnswer = otherItem.querySelector(".faq-answer");
+              const otherToggle = otherItem.querySelector(".faq-toggle");
+
+              if (otherItem !== item) {
+                otherQuestion.classList.remove("active");
+                otherAnswer.classList.remove("active");
+                otherToggle.textContent = "+";
+                otherQuestion.setAttribute("aria-expanded", "false");
+              }
+            });
+
+            // Toggle current item
+            if (isActive) {
+              question.classList.remove("active");
+              answer.classList.remove("active");
+              toggle.textContent = "+";
+              question.setAttribute("aria-expanded", "false");
+            } else {
+              question.classList.add("active");
+              answer.classList.add("active");
+              toggle.textContent = "−";
+              question.setAttribute("aria-expanded", "true");
+
+              // Smooth scroll to question
+              setTimeout(() => {
+                question.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }, 300);
+            }
+          });
+
+          // Keyboard support
+          question.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              question.click();
+            }
+          });
+        });
+
+        // Search functionality
+        function performSearch(searchTerm) {
+          searchTerm = searchTerm.toLowerCase().trim();
+
+          if (searchTerm.length >= 2) {
+            let foundResults = false;
+
+            faqItems.forEach((item) => {
+              const questionText = item
+                .querySelector(".question-text")
+                .textContent.toLowerCase();
+              const answerText = item
+                .querySelector(".answer-content")
+                .textContent.toLowerCase();
+
+              if (
+                questionText.includes(searchTerm) ||
+                answerText.includes(searchTerm)
+              ) {
+                item.style.display = "block";
+                item.classList.add("search-highlight");
+                foundResults = true;
+              } else {
+                item.style.display = "none";
+                item.classList.remove("search-highlight");
+              }
+            });
+
+            // Show search results message
+            showSearchResults(foundResults, searchTerm);
+          } else {
+            // Show all items if search term is too short
+            faqItems.forEach((item) => {
+              item.style.display = "block";
+              item.classList.remove("search-highlight");
+            });
+            hideSearchResults();
+          }
+        }
+
+        function showSearchResults(foundResults, searchTerm) {
+          let resultsMessage = document.querySelector(
+            ".search-results-message"
+          );
+
+          if (!resultsMessage) {
+            resultsMessage = document.createElement("div");
+            resultsMessage.className = "search-results-message";
+
+            const faqContainer = document.querySelector(".faq-container");
+            faqContainer.parentNode.insertBefore(resultsMessage, faqContainer);
+          }
+
+          if (!foundResults) {
+            resultsMessage.innerHTML = `
+                        <div class="no-results">
+                            <h3>No results found for "${searchTerm}"</h3>
+                            <p>Try searching with different keywords or browse all questions below.</p>
+                        </div>
+                    `;
+            resultsMessage.style.display = "block";
+          } else {
+            resultsMessage.style.display = "none";
+          }
+        }
+
+        function hideSearchResults() {
+          const resultsMessage = document.querySelector(
+            ".search-results-message"
+          );
+          if (resultsMessage) {
+            resultsMessage.style.display = "none";
+          }
+        }
+
+        function showNotification(message, type = "info") {
+          const notification = document.createElement("div");
+          notification.textContent = message;
+          notification.className = `notification ${type}`;
+
+          const bgColors = {
+            success: "#27ae60",
+            warning: "#f39c12",
+            error: "#e74c3c",
+            info: "#3498db",
+          };
+          notification.style.background = bgColors[type] || bgColors.info;
+
+          document.body.appendChild(notification);
+          setTimeout(() => notification.remove(), 3000);
+        }
+
+        // Search input event listener
+        if (searchInput) {
+          // Debounce search function
+          let searchTimeout;
+          searchInput.addEventListener("input", function () {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+              performSearch(this.value);
+            }, 300);
+          });
+
+          searchInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              performSearch(this.value);
+            }
+          });
+        }
+
+        // Search button event listener
+        if (searchBtn) {
+          searchBtn.addEventListener("click", function () {
+            performSearch(searchInput.value);
+          });
+        }
+
+        // Read More Button
+        const readMoreBtn = document.querySelector(".read-more-btn");
+        if (readMoreBtn) {
+          readMoreBtn.addEventListener("click", () => {
+            showNotification("Thank you for staying safe online! 🛡️", "success");
+          });
+        }
+      });
+    </script>
+</body>
+</html>

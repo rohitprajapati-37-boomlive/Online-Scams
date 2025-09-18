@@ -6,7 +6,7 @@
 }
 
 body {
-   font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -21,14 +21,13 @@ body {
 
 /* Hero Section with Banner */
 .hero-section {
-    background: 
-        linear-gradient(135deg, 
-            rgba(10, 10, 10, 0.8) 0%, 
-            rgba(26, 26, 46, 0.75) 25%, 
-            rgba(22, 33, 62, 0.6) 50%, 
-            rgba(15, 52, 96, 0.7) 75%, 
-            rgba(83, 52, 131, 0.8) 100%
-        ),
+    background:
+        linear-gradient(135deg,
+            rgba(10, 10, 10, 0.8) 0%,
+            rgba(26, 26, 46, 0.75) 25%,
+            rgba(22, 33, 62, 0.6) 50%,
+            rgba(15, 52, 96, 0.7) 75%,
+            rgba(83, 52, 131, 0.8) 100%),
         url('../images/hero_banner.png');
     background-position: right center;
     background-size: cover;
@@ -42,6 +41,7 @@ body {
     /* Add banner animation */
     animation: bannerShift 20s ease-in-out infinite;
 }
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -50,9 +50,7 @@ body {
     right: 0;
     bottom: 0;
     pointer-events: none;
-    background: linear-gradient(202deg, #050505 0%, #000000 45%, #9a2d2d 75%, #4e6aa9 100%
-100%
-);
+    background: linear-gradient(202deg, #050505 0%, #000000 45%, #9a2d2d 75%, #4e6aa9 100% 100%);
     opacity: 0.6;
 }
 
@@ -63,13 +61,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 3px,
-        rgba(255, 255, 255, 0.03) 3px,
-        rgba(255, 255, 255, 0.03) 6px
-    );
+    background-image: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 3px,
+            rgba(255, 255, 255, 0.03) 3px,
+            rgba(255, 255, 255, 0.03) 6px);
     pointer-events: none;
     z-index: 1;
     opacity: 0.7;
@@ -92,9 +88,12 @@ body {
 
 /* Hero Banner Float Animation */
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px) rotate(var(--rotation, 0deg));
     }
+
     50% {
         transform: translateY(-15px) rotate(var(--rotation, 0deg));
     }
@@ -102,10 +101,13 @@ body {
 
 /* Pulse Animation */
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.7;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.15);
@@ -114,50 +116,61 @@ body {
 
 /* Text Glitch Animation */
 @keyframes textGlitch {
-    0%, 100% { 
-        transform: translateX(0); 
+
+    0%,
+    100% {
+        transform: translateX(0);
         opacity: 0.9;
     }
-    20% { 
-        transform: translateX(-2px); 
+
+    20% {
+        transform: translateX(-2px);
         opacity: 0.8;
     }
-    40% { 
-        transform: translateX(2px); 
+
+    40% {
+        transform: translateX(2px);
         opacity: 0.9;
     }
-    60% { 
-        transform: translateX(-1px); 
+
+    60% {
+        transform: translateX(-1px);
         opacity: 0.7;
     }
-    80% { 
-        transform: translateX(1px); 
+
+    80% {
+        transform: translateX(1px);
         opacity: 0.8;
     }
 }
 
 /* Fade In Out Animation */
 @keyframes fadeInOut {
-    0%, 100% { 
-        opacity: 0.7; 
+
+    0%,
+    100% {
+        opacity: 0.7;
         transform: scale(1);
     }
-    50% { 
-        opacity: 1; 
+
+    50% {
+        opacity: 1;
         transform: scale(1.02);
     }
 }
 
 /* Card Shine Animation */
 @keyframes cardShine {
-    0% { 
+    0% {
         transform: translateX(-100%) translateY(-100%) rotate(45deg);
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
-    100% { 
+
+    100% {
         transform: translateX(100%) translateY(100%) rotate(45deg);
         opacity: 0;
     }
@@ -168,6 +181,7 @@ body {
     0% {
         background-position: 0% 0%;
     }
+
     100% {
         background-position: 100% 100%;
     }
@@ -176,17 +190,19 @@ body {
 /* Hero Title Animation */
 @keyframes heroTitleGlow {
     0% {
-        text-shadow: 
+        text-shadow:
             0 4px 20px rgba(0, 0, 0, 0.7),
             0 0 30px rgba(255, 255, 255, 0.3);
     }
+
     50% {
-        text-shadow: 
+        text-shadow:
             0 4px 30px rgba(0, 0, 0, 0.8),
             0 0 50px rgba(255, 255, 255, 0.5);
     }
+
     100% {
-        text-shadow: 
+        text-shadow:
             0 4px 20px rgba(0, 0, 0, 0.7),
             0 0 30px rgba(255, 255, 255, 0.3);
     }
@@ -197,9 +213,11 @@ body {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -260,9 +278,12 @@ body {
 
 /* Button Pulse Animation */
 @keyframes buttonPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
     }
+
     50% {
         box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
     }
@@ -275,7 +296,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.6s;
 }
 
@@ -317,7 +338,7 @@ body {
     background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
     border-radius: 25px;
     padding: 12px;
-    box-shadow: 
+    box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.6),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
@@ -353,10 +374,21 @@ body {
     animation: fadeInOut 3s infinite;
 }
 
-.text-line:nth-child(2) { animation-delay: 0.5s; }
-.text-line:nth-child(3) { animation-delay: 1s; }
-.text-line:nth-child(4) { animation-delay: 1.5s; }
-.text-line:nth-child(5) { animation-delay: 2s; }
+.text-line:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.text-line:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.text-line:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.text-line:nth-child(5) {
+    animation-delay: 2s;
+}
 
 /* Hacker Figure */
 .hacker-figure {
@@ -406,7 +438,7 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     /* FIXED: Add proper animation */
     animation: cardShine 3s infinite;
 }
@@ -430,7 +462,7 @@ body {
 .card-number {
     color: white;
     font-size: 6px;
-   font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card-1 {
@@ -469,7 +501,7 @@ body {
     color: #ff3333;
     font-size: 2.5rem;
     z-index: 15;
-    text-shadow: 
+    text-shadow:
         0 0 20px rgba(255, 51, 51, 0.8),
         0 0 40px rgba(255, 51, 51, 0.4);
     /* FIXED: Add proper animation */
@@ -479,14 +511,14 @@ body {
 .icon-1 {
     top: 30%;
     right: 25%;
-       animation: pulse 2s ease-in-out infinite;
+    animation: pulse 2s ease-in-out infinite;
     animation-delay: 0s;
 }
 
 .icon-2 {
     top: 63%;
     right: 90%;
-       animation: pulse 2s ease-in-out infinite;
+    animation: pulse 2s ease-in-out infinite;
     animation-delay: 1s;
 }
 
@@ -552,7 +584,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.6s ease;
 }
 
@@ -592,7 +624,7 @@ body {
     border-radius: 36px;
     padding: 8px;
     position: relative;
-    box-shadow: 
+    box-shadow:
         0 0 0 2px #4b5563,
         0 20px 80px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -602,7 +634,7 @@ body {
 
 .phone-frame:hover {
     transform: rotateY(5deg) rotateX(5deg);
-    box-shadow: 
+    box-shadow:
         0 0 0 2px #6b7280,
         0 30px 100px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -720,10 +752,10 @@ body {
 /* Chat Area */
 .chat-area {
     flex: 1;
-    background: 
+    background:
         linear-gradient(to bottom, #e5ddd5 0%, #d1c7bb 100%);
-    background-image: 
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-image:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 100% 100%, 20px 20px;
     padding: 20px 16px;
     display: flex;
@@ -794,7 +826,7 @@ body {
     color: white;
     align-self: flex-start;
     border-bottom-left-radius: 4px;
-    box-shadow: 
+    box-shadow:
         0 4px 16px rgba(239, 68, 68, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     animation: scamAlert 0.5s ease-out, scamPulse 2s ease-in-out infinite 1s;
@@ -1041,8 +1073,8 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-        background-image: url(../images/how-to-steps.png);
-        background-size: cover;
+    background-image: url(../images/how-to-steps.png);
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -1053,16 +1085,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(52, 152, 219, 0.1) 0%, transparent 50%),
-        repeating-linear-gradient(
-            45deg,
+        repeating-linear-gradient(45deg,
             transparent,
             transparent 2px,
             rgba(255, 255, 255, 0.02) 2px,
-            rgba(255, 255, 255, 0.02) 4px
-        );
+            rgba(255, 255, 255, 0.02) 4px);
     pointer-events: none;
     z-index: 1;
 }
@@ -1085,7 +1115,7 @@ body {
     font-weight: 800;
     color: #ff6b6b;
     margin-bottom: 30px;
-    text-shadow: 
+    text-shadow:
         0 4px 20px rgba(255, 107, 107, 0.4),
         0 8px 40px rgba(0, 0, 0, 0.3);
     letter-spacing: -3px;
@@ -1159,7 +1189,7 @@ h2.main-title {
     width: 320px;
     min-height: 380px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 
+    box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1262,7 +1292,7 @@ h2.main-title {
 
 .step:hover {
     transform: translateY(-20px) scale(1.05);
-    box-shadow: 
+    box-shadow:
         0 25px 60px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
@@ -1302,7 +1332,7 @@ h2.main-title {
     height: 60px;
     position: relative;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
     align-items: center;
     opacity: 0;
     animation: arrowFadeIn 1s ease-out 2.2s forwards;
@@ -1385,7 +1415,7 @@ h2.main-title {
 .faq-section {
     background: #f5f7fa;
     padding: 80px 0;
-   font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .faq-section .container {
@@ -1439,7 +1469,7 @@ h2.main-title {
     align-items: center;
     color: #2d3748;
     transition: all 0.3s ease;
-   font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .faq-question:hover {
@@ -1688,12 +1718,12 @@ h2.main-title {
 
 /* Footer Section */
 .footer-section {
-    background: linear-gradient(135deg, 
-        #2d1b69 0%, 
-        #1a1a3e 20%, 
-        #0f2851 50%, 
-        #1e3a5f 80%, 
-        #2a4a6b 100%);
+    background: linear-gradient(135deg,
+            #2d1b69 0%,
+            #1a1a3e 20%,
+            #0f2851 50%,
+            #1e3a5f 80%,
+            #2a4a6b 100%);
     position: relative;
     overflow: hidden;
     min-height: 75vh;
@@ -1701,7 +1731,7 @@ h2.main-title {
     align-items: center;
     padding: 10px 0;
     z-index: 2;
-        background-image: url(../images/Footer_banner_hacker.png);
+    background-image: url(../images/Footer_banner_hacker.png);
     background-position: center;
     background-size: cover;
     opacity: calc(0.9 + (1 - var(--scroll, 0)) * 0.1);
@@ -1714,13 +1744,11 @@ h2.main-title {
     left: 0;
     right: 0;
     bottom: 0;
-    background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 2px,
-        rgba(255, 255, 255, 0.02) 2px,
-        rgba(255, 255, 255, 0.02) 4px
-    );
+    background: repeating-linear-gradient(-45deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.02) 2px,
+            rgba(255, 255, 255, 0.02) 4px);
     pointer-events: none;
     z-index: 1;
 }
@@ -1742,20 +1770,18 @@ h2.main-title {
 
 .hacker-container {
     position: relative;
- width: 600px;
+    width: 600px;
     height: 420px;
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.9) 0%, rgba(178, 34, 34, 0.7) 50%, rgba(220, 20, 60, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.9) 0%, rgb(0 0 0 / 70%) 50%, rgb(0 0 0) 100%);
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.4s ease;
-    box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgb(0 0 0), inset 0 1px 0 rgb(114 41 41 / 76%);
 }
 
 .hacker-container:hover {
     transform: scale(1.02);
-    box-shadow: 
+    box-shadow:
         0 25px 80px rgba(0, 0, 0, 0.8),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
@@ -1796,7 +1822,7 @@ h2.main-title {
 
 .error-code {
     color: #e75040;
-   font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     margin-bottom: 6px;
     opacity: 0.9;
@@ -1805,18 +1831,47 @@ h2.main-title {
     line-height: 1.3;
 }
 
-.error-code:nth-child(1) { animation-delay: 0s; }
-.error-code:nth-child(2) { animation-delay: 0.2s; }
-.error-code:nth-child(3) { animation-delay: 0.4s; }
-.error-code:nth-child(4) { animation-delay: 0.6s; }
-.error-code:nth-child(5) { animation-delay: 0.8s; }
-.error-code:nth-child(6) { animation-delay: 1.0s; }
-.error-code:nth-child(7) { animation-delay: 1.2s; }
-.error-code:nth-child(8) { animation-delay: 1.4s; }
-.error-code:nth-child(9) { animation-delay: 1.6s; }
-.error-code:nth-child(10) { animation-delay: 1.8s; }
+.error-code:nth-child(1) {
+    animation-delay: 0s;
+}
 
-.hacker-main-img[style*="display: none"] ~ .hacker-fallback::before,
+.error-code:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.error-code:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.error-code:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.error-code:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.error-code:nth-child(6) {
+    animation-delay: 1.0s;
+}
+
+.error-code:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+.error-code:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+.error-code:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+.error-code:nth-child(10) {
+    animation-delay: 1.8s;
+}
+
+.hacker-main-img[style*="display: none"]~.hacker-fallback::before,
 .hacker-container::after {
     content: '';
     position: absolute;
@@ -1825,16 +1880,14 @@ h2.main-title {
     transform: translate(-50%, -50%);
     width: 200px;
     height: 260px;
-    background: linear-gradient(145deg, 
-        rgba(0, 0, 0, 0.8) 0%, 
-        rgba(20, 20, 20, 0.9) 50%, 
-        rgba(0, 0, 0, 0.8) 100%);
-    clip-path: polygon(
-        35% 5%, 65% 5%, 70% 15%, 75% 30%, 
-        80% 50%, 75% 70%, 70% 85%, 65% 95%, 
-        35% 95%, 30% 85%, 25% 70%, 20% 50%, 
-        25% 30%, 30% 15%
-    );
+    background: linear-gradient(145deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(20, 20, 20, 0.9) 50%,
+            rgba(0, 0, 0, 0.8) 100%);
+    clip-path: polygon(35% 5%, 65% 5%, 70% 15%, 75% 30%,
+            80% 50%, 75% 70%, 70% 85%, 65% 95%,
+            35% 95%, 30% 85%, 25% 70%, 20% 50%,
+            25% 30%, 30% 15%);
     z-index: 1;
     opacity: 0;
 }
@@ -1859,7 +1912,7 @@ h2.main-title {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 
+    box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.3),
         0 0 0 2px rgba(255, 68, 68, 0.2);
     transform: rotate(15deg);
@@ -1893,7 +1946,7 @@ h2.main-title {
     justify-content: center;
     font-size: 20px;
     margin-bottom: 10px;
-    box-shadow: 
+    box-shadow:
         0 4px 15px rgba(255, 68, 68, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     animation: iconPulse 2s ease-in-out infinite;
@@ -1907,10 +1960,12 @@ h2.main-title {
     letter-spacing: 0.5px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 .scam-alert-image img {
     width: 180px;
     height: 180px;
 }
+
 .remember-title {
     font-size: 2.5rem;
     color: #e74c3c;
@@ -1918,7 +1973,7 @@ h2.main-title {
     margin: 20px 0 10px 0;
     line-height: 0.9;
     letter-spacing: -2px;
-    text-shadow: 
+    text-shadow:
         0 4px 20px rgba(231, 76, 60, 0.5),
         0 8px 40px rgba(231, 76, 60, 0.3);
     animation: titleGlow 3s ease-in-out infinite alternate;
@@ -1969,27 +2024,33 @@ h2.main-title {
 }
 
 @keyframes arrowFlow {
-    0%, 100% {
-        background: linear-gradient(90deg, 
-            rgba(255, 255, 255, 0.4), 
-            rgba(52, 152, 219, 0.8), 
-            rgba(255, 255, 255, 0.4));
+
+    0%,
+    100% {
+        background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0.4),
+                rgba(52, 152, 219, 0.8),
+                rgba(255, 255, 255, 0.4));
         transform: scaleX(1);
     }
+
     50% {
-        background: linear-gradient(90deg, 
-            rgba(52, 152, 219, 0.8), 
-            rgba(255, 255, 255, 0.9), 
-            rgba(52, 152, 219, 0.8));
+        background: linear-gradient(90deg,
+                rgba(52, 152, 219, 0.8),
+                rgba(255, 255, 255, 0.9),
+                rgba(52, 152, 219, 0.8));
         transform: scaleX(1.1);
     }
 }
 
 @keyframes arrowPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(-50%) translateX(0) scale(1);
         opacity: 0.8;
     }
+
     50% {
         transform: translateY(-50%) translateX(5px) scale(1.2);
         opacity: 1;
@@ -1997,19 +2058,25 @@ h2.main-title {
 }
 
 @keyframes phoneFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-10px);
     }
 }
 
 @keyframes avatarPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
+
     50% {
         transform: scale(1.05);
         box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
@@ -2021,6 +2088,7 @@ h2.main-title {
         opacity: 0;
         transform: translateY(10px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -2032,6 +2100,7 @@ h2.main-title {
         opacity: 0;
         transform: translateY(10px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -2039,32 +2108,41 @@ h2.main-title {
 }
 
 @keyframes scamPulse {
-    0%, 100% {
-        box-shadow: 
+
+    0%,
+    100% {
+        box-shadow:
             0 4px 16px rgba(239, 68, 68, 0.3),
             inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
+
     50% {
-        box-shadow: 
+        box-shadow:
             0 8px 32px rgba(239, 68, 68, 0.5),
             inset 0 1px 0 rgba(255, 255, 255, 0.2);
     }
 }
 
 @keyframes warningBlink {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.7;
     }
 }
 
 @keyframes cardFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(15deg) translateY(0px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
     }
+
     50% {
         transform: rotate(12deg) translateY(-8px);
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
@@ -2072,23 +2150,29 @@ h2.main-title {
 }
 
 @keyframes iconPulse {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: scale(1);
         box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
     }
-    50% { 
+
+    50% {
         transform: scale(1.1);
         box-shadow: 0 6px 25px rgba(255, 68, 68, 0.6);
     }
 }
 
 @keyframes codeFlicker {
-    0%, 100% { 
+
+    0%,
+    100% {
         opacity: 0.9;
         text-shadow: 0 0 8px rgba(255, 68, 68, 0.5);
         transform: translateX(0);
     }
-    50% { 
+
+    50% {
         opacity: 0.7;
         text-shadow: 0 0 12px rgba(255, 68, 68, 0.8);
         transform: translateX(-1px);
@@ -2096,13 +2180,14 @@ h2.main-title {
 }
 
 @keyframes titleGlow {
-    0% { 
-        text-shadow: 
+    0% {
+        text-shadow:
             0 4px 20px rgba(231, 76, 60, 0.5),
             0 8px 40px rgba(231, 76, 60, 0.3);
     }
-    100% { 
-        text-shadow: 
+
+    100% {
+        text-shadow:
             0 4px 30px rgba(231, 76, 60, 0.7),
             0 8px 60px rgba(231, 76, 60, 0.5);
     }
@@ -2113,41 +2198,41 @@ h2.main-title {
     .hero-content {
         gap: 40px;
     }
-    
+
     .hero-visual {
         height: 500px;
     }
-    
+
     .hacker-figure {
         right: 50px;
         width: 350px;
         height: 360px;
     }
-    
+
     .content-wrapper {
         gap: 60px;
     }
-    
+
     .phone-frame {
         width: 340px;
         height: 650px;
     }
-    
+
     .how-it-works-section {
         padding: 80px 0;
     }
-    
+
     .section-header {
         margin-bottom: 60px;
     }
-    
+
     .steps-container {
         flex-direction: column;
         gap: 30px;
         align-items: center;
     }
-    
-     .arrow-connector {
+
+    .arrow-connector {
         width: 8px;
         height: 60px;
         transform: none;
@@ -2156,19 +2241,20 @@ h2.main-title {
         align-items: center;
         justify-content: center;
     }
-    
+
     .arrow-line {
         width: 8px;
         height: 50px;
-        background: linear-gradient(180deg, 
-            rgba(231, 83, 80, 0.3),
-            rgba(231, 83, 80, 0.9),
-            rgba(231, 83, 80, 0.3));
+        background: linear-gradient(180deg,
+                rgba(231, 83, 80, 0.3),
+                rgba(231, 83, 80, 0.9),
+                rgba(231, 83, 80, 0.3));
         border-radius: 4px;
-        border: none; /* Remove horizontal borders */
+        border: none;
+        /* Remove horizontal borders */
         animation: verticalArrowFlow 3s ease-in-out infinite;
     }
-    
+
     .arrow-head {
         position: static;
         transform: none;
@@ -2181,39 +2267,39 @@ h2.main-title {
         margin-top: -3px;
         animation: verticalArrowPulse 3s ease-in-out infinite;
     }
-    
+
     .step {
         width: 320px;
         max-width: 90vw;
     }
-    
+
     .faq-section {
         padding: 60px 0;
     }
-    
+
     .answer-columns {
         gap: 15px;
     }
-    
+
     .answer-column {
         padding: 18px;
     }
-    
+
     .footer-section {
         padding: 60px 0;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 60px;
         text-align: center;
     }
-    
+
     .hacker-container {
         width: 500px;
         height: 320px;
     }
-    
+
     .scam-alert-card {
         position: relative;
         top: 0;
@@ -2223,7 +2309,7 @@ h2.main-title {
         transform: rotate(0deg);
         display: inline-block;
     }
-    
+
     .remember-title {
         font-size: 4rem;
         margin: 30px 0;
@@ -2236,14 +2322,14 @@ h2.main-title {
         background-size: cover;
         background-attachment: scroll;
     }
-    
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
         padding: 40px 0;
     }
-    
+
     .hero-visual {
         order: 1;
         height: 350px;
@@ -2251,100 +2337,100 @@ h2.main-title {
         max-width: 500px;
         margin-bottom: 20px;
     }
-    
+
     .hero-text {
         order: 2;
         max-width: 100%;
     }
-    
-  .hacker-figure {
+
+    .hacker-figure {
         right: 10%;
         top: 50%;
         width: 250px;
         height: 260px;
     }
-    
 
 
 
-.card-1 {
-    top: 5%;
-    right: 15%;
-}
 
-.card-2 {
-    top: 45%;
-    right: 5%;
-}
+    .card-1 {
+        top: 5%;
+        right: 15%;
+    }
 
-.card-3 {
-    top: 25%;
-    right: 75%;
-}
+    .card-2 {
+        top: 45%;
+        right: 5%;
+    }
 
-/* Warning Icons */
+    .card-3 {
+        top: 25%;
+        right: 75%;
+    }
 
-.icon-1 {
-    top: 20%;
-    right: 20%;
-}
+    /* Warning Icons */
 
-.icon-2 {
-    top: 45%;
-    right: 80%;
-}
+    .icon-1 {
+        top: 20%;
+        right: 20%;
+    }
 
-.icon-3 {
-    top: 70%;
-    right: 40%;
-}
+    .icon-2 {
+        top: 45%;
+        right: 80%;
+    }
+
+    .icon-3 {
+        top: 70%;
+        right: 40%;
+    }
 
 
 
     .main-section {
         padding: 60px 0;
     }
-    
+
     .content-wrapper {
         grid-template-columns: 1fr;
         gap: 50px;
         text-align: center;
     }
-    
+
     .left-content {
         max-width: 100%;
         order: 2;
     }
-    
+
     .right-content {
         order: 1;
     }
-    
+
     .phone-frame {
         width: 330px;
         height: 650px;
     }
-    
+
     .feature-tags {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .how-it-works-section {
         padding: 60px 0;
         background-image: url(../images/step-how-to-work-for-mobile-view.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
-    
+
     .section-header {
         margin-bottom: 50px;
     }
-    
+
     .main-title {
         margin-bottom: 20px;
     }
-    
+
     .step {
         width: calc(100vw - 40px);
         max-width: 350px;
@@ -2352,104 +2438,104 @@ h2.main-title {
         padding: 25px 20px;
         margin: 0 auto;
     }
-    
- .step-bg-number {
+
+    .step-bg-number {
         font-size: 7rem;
         top: 5px;
         right: 10px;
         opacity: 0.05;
     }
-    
+
     .step-title {
         font-size: 1.8rem;
         margin-bottom: 20px;
     }
-    
+
     .step-description {
         font-size: 1rem;
         line-height: 1.6;
     }
-    
+
     .step-icon {
         width: 45px;
         height: 45px;
         font-size: 20px;
     }
-    
+
     .arrow-connector {
         height: 45px;
         margin: 15px 0;
     }
-    
+
     .arrow-line {
         height: 35px;
         width: 5px;
     }
-    
+
     .arrow-head {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         border-top: 14px solid #3498db;
     }
-    
+
     .faq-section {
         padding: 50px 0;
     }
-    
+
     .faq-title {
         text-align: center;
         margin-bottom: 35px;
     }
-    
+
     .faq-question {
         padding: 18px 20px;
         font-size: 1rem;
     }
-    
+
     .answer-content {
         padding: 10px 20px 25px 20px;
     }
-    
+
     .answer-columns {
         grid-template-columns: 1fr;
         gap: 15px;
         margin-top: 20px;
     }
-    
+
     .answer-column {
         padding: 16px;
     }
-    
+
     .column-header h4 {
         font-size: 1rem;
     }
-    
+
     .column-list li {
         font-size: 0.9rem;
     }
-    
+
     .read-more-container {
         margin-top: 30px;
     }
-    
+
     .read-more-btn {
         padding: 12px 25px;
         font-size: 0.95rem;
     }
-    
+
     .footer-section {
         padding: 50px 0;
     }
-    
+
     .hacker-container {
         width: 400px;
         height: 260px;
     }
-    
-.scam-alert-image img {
-    width: 110px;
-    height: 110px;
-}
+
+    .scam-alert-image img {
+        width: 110px;
+        height: 110px;
+    }
 
 
 
@@ -2459,38 +2545,38 @@ h2.main-title {
         padding: 15px;
         max-width: 250px;
     }
-    
+
     .error-code {
         font-size: 9px;
         margin-bottom: 4px;
     }
-    
+
     .remember-title {
         font-size: 3rem;
     }
-    
-   .description-box {
+
+    .description-box {
         padding: 20px;
         background: transparent;
         border: none;
         box-shadow: none;
     }
-    
+
     .description-box p {
         font-size: 1.1rem;
     }
-    
+
     .scam-alert-card {
         width: 110px;
         height: 90px;
     }
-    
+
     .alert-icon {
         width: 40px;
         height: 40px;
         font-size: 18px;
     }
-    
+
     .alert-text {
         font-size: 10px;
     }
@@ -2501,67 +2587,68 @@ h2.main-title {
         background-size: cover;
         background-position: center top;
     }
-    
+
     .container {
         padding: 0 15px;
     }
-    
+
     .hero-content {
         gap: 20px;
         padding: 30px 0;
     }
-    
+
     .hero-visual {
         height: 280px;
         margin-bottom: 15px;
     }
-    
+
     /* .hacker-figure {
         right: 25%;
         top: 40%;
         width: 220px;
         height: 230px;
     } */
-    
+
     .search-box {
         flex-direction: column;
         padding: 16px;
         border-radius: 16px;
     }
-    
+
     .search-box input {
         margin-bottom: 16px;
         text-align: center;
     }
-    
+
     .search-btn {
         width: 100%;
         border-radius: 12px;
     }
-    
+
     .how-it-works-section {
         padding: 50px 0;
     }
-    
- .step {
+
+    .step {
         width: calc(100vw - 30px);
         min-height: 280px;
         padding: 20px 15px;
     }
+
     .section-header {
         margin-bottom: 40px;
     }
-    
+
     .highlight-text::after {
         height: 2px;
     }
-    
+
     .arrow-connector {
         height: 40px;
         margin: 15px 0;
     }
-    
-  .arrow-line {
+
+    .arrow-line {
         right: 0;
         height: 30px;
         width: 6px;
@@ -2569,78 +2656,78 @@ h2.main-title {
         border-right: 60px solid transparent;
         border-top: 50px solid #e85350;
     }
-    
-     .arrow-head {
+
+    .arrow-head {
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
         border-top: 40px solid #e85350;
     }
-    
+
     .section-header {
         margin-bottom: 30px;
     }
-    
+
     .main-title {
         font-size: 2.5rem;
         margin-bottom: 15px;
     }
-    
+
     .faq-section {
         padding: 40px 0;
     }
-    
+
     .faq-section .container {
         padding: 0 15px;
     }
-    
+
     .faq-question {
         padding: 15px 18px;
         font-size: 0.95rem;
     }
-    
+
     .answer-content {
         padding: 10px 18px 20px 18px;
     }
-    
+
     .answer-intro {
         font-size: 0.95rem;
         margin-bottom: 20px;
     }
-    
+
     .answer-column {
         padding: 14px;
     }
-    
+
     .column-icon {
         width: 35px;
         height: 35px;
         font-size: 1.1rem;
         margin-right: 10px;
     }
-    
+
     .column-header h4 {
         font-size: 0.95rem;
     }
-    
+
     .column-list li {
         font-size: 0.85rem;
         margin-bottom: 10px;
     }
-    
+
     .simple-list li {
         font-size: 0.95rem;
         margin-bottom: 10px;
     }
-    
+
     .faq-toggle {
         font-size: 1.6rem;
     }
-    
+
     .hacker-container {
         width: 320px;
         height: 200px;
     }
-    
+
     .hacker-overlay {
         top: 0px;
         left: 0px;
@@ -2649,26 +2736,26 @@ h2.main-title {
         z-index: 0;
         background: rgb(140 24 22);
     }
-    
+
     .error-code {
         font-size: 8px;
         margin-bottom: 3px;
     }
-    
+
     .remember-title {
         font-size: 2.5rem;
         margin: 20px 0;
     }
-    
+
     .description-box p {
         font-size: 1rem;
     }
-    
+
     .scam-alert-card {
         width: 100px;
         height: 80px;
     }
-    
+
     .alert-icon {
         width: 35px;
         height: 35px;
@@ -2714,6 +2801,7 @@ html {
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
     .scam-alert-card,
     .alert-icon,
     .remember-title,
@@ -2728,11 +2816,11 @@ html {
     .footer-section {
         background: #000;
     }
-    
+
     .remember-title {
         color: #ff6666;
     }
-    
+
     .error-code {
         color: #ff4444;
     }
@@ -2744,7 +2832,7 @@ html {
         background: white !important;
         color: black !important;
     }
-    
+
     .step {
         border: 2px solid #ccc !important;
         background: white !important;
@@ -2753,25 +2841,31 @@ html {
 
 /* Additional Animation Keyframes */
 @keyframes verticalArrowFlow {
-    0%, 100% {
-        background: linear-gradient(180deg, 
-            rgba(52, 152, 219, 0.3),
-            rgba(52, 152, 219, 0.9),
-            rgba(52, 152, 219, 0.3));
+
+    0%,
+    100% {
+        background: linear-gradient(180deg,
+                rgba(52, 152, 219, 0.3),
+                rgba(52, 152, 219, 0.9),
+                rgba(52, 152, 219, 0.3));
     }
+
     50% {
-        background: linear-gradient(180deg, 
-            rgba(52, 152, 219, 0.9),
-            rgba(255, 255, 255, 0.9),
-            rgba(52, 152, 219, 0.9));
+        background: linear-gradient(180deg,
+                rgba(52, 152, 219, 0.9),
+                rgba(255, 255, 255, 0.9),
+                rgba(52, 152, 219, 0.9));
     }
 }
 
 @keyframes verticalArrowPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) scale(1);
         opacity: 0.8;
     }
+
     50% {
         transform: translateY(4px) scale(1.2);
         opacity: 1;
